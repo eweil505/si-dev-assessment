@@ -1,6 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
+<h1>Send a Text</h1>
+<p>Welcome! Enter a phone number and send a text message here.</p>
+<form>
+    <label for="phoneNumber" class="phone-number">Phone Number</label>
+    <input id="phoneNumber" type="text">
+    
+    <label for="message" class="message">Message</label>
+    <input id= "message" type="text">
+</form>
 <%= form_tag("/sms/send", method: "post") do %>
-<!-- add form elements here -->
+<%= telephone_field(:user, :name) %>
+<%= text_field(:person, :name) %>
 <% end %>
